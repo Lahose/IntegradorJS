@@ -1,0 +1,476 @@
+*{
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+.cabecera{
+color: white;
+background-color: rgb(235, 87, 87);
+width: 100vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 10vh;
+padding: 0px 50px;
+margin-bottom: 10px;
+}
+
+.buscar{
+display: flex;
+justify-content: space-between;
+width: 350px;
+}
+
+.buscadorWrapper {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+#inputSearch{
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.botonBuscar {
+  background-color: rgba(255, 255, 255, 0.826);
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  color: rgb(241, 78, 78);
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  }
+  
+  
+  .botonBuscar:hover {
+  background-color: rgba(255, 255, 255, 0.826);
+  transition: .3s;
+  }
+  
+  .botonBuscar:not(:hover) {
+  background-color: white;
+  transition: .3s;
+  }
+  
+/* BODY */
+
+.body {
+background-color: rgb(249, 151, 128);
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100vw;
+}
+
+/* MAIN */
+
+main {
+  width: 90%;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.menu {
+  width: 30%;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.categoriasProductos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  min-height: fit-content;
+}
+
+.categoryTitle {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 250px;
+  height: fit-content;
+  border: 1px solid rgb(225, 225, 225);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productCard:hover{
+  transform: scale(1.03);
+  transition: .2s;
+}
+
+.productCard:not(:hover){
+  transition: .2s;
+}
+
+.productCard h2 {
+  font-size: 16px;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.comprarBoton {
+  background-color: rgb(9, 168, 9);
+  border: none;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+max-width: 400px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 30px 200px;
+}
+
+.parteFormulario {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+}
+
+.parteFormulario input, select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid gray  ;
+}
+
+input,select{
+  width: 100%;
+}
+
+.primerh2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.boton {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+display: flex;
+justify-content: space-between;
+}
+
+.cancelar {
+background-color: rgb(255, 153, 110);
+color: black;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+.aceptar {
+background-color: rgb(152, 241, 155);
+color: black;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+.aceptar:hover{
+  background-color: rgb(94, 196, 97);
+  transition: .3s;
+}
+
+.aceptar:not(:hover){
+  background-color: rgb(152, 241, 155);
+  transition: .3s;
+}
+
+.cancelar:hover{
+  background-color: rgb(233, 111, 58);
+  transition: .3s;
+}
+
+.cancelar:not(:hover){
+  background-color: rgb(255, 153, 110);
+  transition: .3s;
+}
+
+.eliminar {
+  background-color: rgb(235, 25, 25);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  }
+  
+.eliminar:hover{
+  background-color: rgb(175, 18, 18);
+  transition: .3s;
+}
+  
+.eliminar:not(:hover){
+  background-color: rgb(235, 25, 25);
+  color: white;
+  transition: .3s;
+}
+  
+
+.menu{
+color: black;
+background-color: white;
+padding: 30px 60px;
+border-radius: 10px;
+display: flex;
+gap: 20px;
+flex-direction: column;
+min-width: 220px;
+height: fit-content;
+/* el calc es para calcular dos valores, en este caso es medio estupido porque es sabido que 100 - 10 es 90 pero igualmente sirve que lo sepas, estoy agarrando el viewport height del dispositivo (altura máximo independientemente de la pantalla en la que estés y le estoy restando el height que le pusiste al header, esto hace que como mínimo tenga ese tamaño, en caso de que necesite más alto porque agregas mucho contenido, le va a permitir al menu ir agrandandose a medida que lo necesite. Hice el cálculo para que no sobre espacio para abajo de la pantalla y no salga el scroll vertical a la derecha que por lo menos a mí me parece una verga si no lo usasO A */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li:hover{
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.categoriasTitulo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.openModal {
+background-color: rgba(255, 255, 255, 0.826);
+border: none;
+padding: 10px 20px;
+font-weight: 600;
+color: rgb(241, 78, 78);
+cursor: pointer;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+gap: 5px;
+align-items: center;
+}
+
+
+.openModal:hover {
+background-color: rgba(255, 255, 255, 0.826);
+transition: .3s;
+}
+
+.openModal:not(:hover) {
+background-color: white;
+transition: .3s;
+}
+
+.closeModal {
+background-color: rgb(207, 63, 58);
+border: none;
+padding: 10px 14px;
+font-size: 10px;
+font-weight: 600;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+position: absolute;
+right: 10px;
+top: 10px;
+}
+
+.closeModal:hover {
+background-color: rgb(184, 53, 48);
+transition: .3s;
+}
+
+.closeModal:not(:hover) {
+background-color: rgb(207, 63, 58);
+transition: .3s;
+}
+
+
+.liActive{
+  background-color: rgb(255, 153, 110);
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.listFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.productCategory {
+  font-size: 12px;
+  color: gray;
+}
+
+.productName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.popUpContainer {
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.popUpWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  width: 40vw;
+  height: fit-content;
+  background-color: white;
+  padding: 20px 70px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.4rem;
+}
+
+
+@media screen and (max-width: 1280px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    width: 90%;
+  }
+  .menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+  }
+  .listFilter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .productos{
+    width: 100%;
+  }
+  .productos section {
+    max-height: fit-content;
+  }
+  .categoriasProductos{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: fit-content;
+    place-content: center;
+  }
+  .boton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cabecera {
+    padding: 25px;
+    font-size: 10px;
+  }
+  .openModal{
+    font-size: 10px;
+  }
+  #inputSearch {
+    width: 200px;
+    font-size: 15px;
+  }
+  .buscadorWrapper {
+    justify-content: center;
+    width: 100%;
+  }
+  .categoriasProductos{
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+  }
+  .popUpWrapper {
+    width: 60vw;
+    padding: 10px;
+  }
+  .primerh2 {
+    width: 70%
+  }
+  .openModal {
+    padding: 7px;
+  }
+}

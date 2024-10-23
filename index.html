@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link  rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+  </head>
+  <body class="body">
+    <!-- HEADER -->
+    <header class="cabecera" id="cabecera">
+      <div>
+        <h1>DeTodito</h1>
+      </div>
+        <div class="buscar">
+          <div class="buscadorWrapper">
+            <input id="inputSearch" class="outlineBuscar" type="text" placeholder="Ingrese un elemento">
+            <button class="botonBuscar" id="botonBuscar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(241, 78, 78, 1);transform: msFilter"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <button class="openModal" id="openModal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(241, 78, 78, 1);transform: msFilter"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>Agregar Elemento</button>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="popUpContainer" id="modal">
+        <div class="popUpWrapper">
+          <button id="closeModal" class="closeModal">X</button>
+          <h2 class="primerh2">Agregar o Modificar un Producto</h2>
+        <form class="parteFormulario">
+            <input id="nombre" type="text" name="Nombre" placeholder="Ingrese un nombre" required>
+            <input id="imagen" type="url" name="Imagen" placeholder="Ingrese una imagen" required>
+            <input id="precio" type="number" name="Precio" placeholder="Precio" required>
+  
+            <select required id="selecCat">
+                <option disabled selected hidden value="">Seleccione una Categoría</option>
+                <option value="Hamburguesas">Hamburguesas</option>
+                <option value="Papas">Papas</option>
+                <option value="Bebidas">Bebidas</option>
+            </select>
+  
+            <div class="boton">
+                <button type="button" class="cancelar" id="cancelar">Cancelar</button>
+                <button type="submit" class="aceptar" id="aceptar">Aceptar</button>
+                <button class="eliminar" id="eliminar">Eliminar</button>
+            </div>
+  
+        </form>
+        </div>
+      </div>
+
+        <div class="menu" id="menu">
+            <aside class="categoriasTitulo">
+              <h2>Categorías</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+            </aside>
+            
+            <ul class="listFilter" id="listFilter"></ul>
+        </div>
+        <section class="productos" id="store">
+          
+        </section>
+    </main>
+</body>
+<script type="module" src="main.js"></script>
+</html>
