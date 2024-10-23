@@ -2,7 +2,6 @@ import { renderCategories } from './src/services/categories';
 import { handleGetProductLocalStorage, setInLocalStorage } from './src/services/persistence/localStorage';
 import { handleSearchProductByName } from './src/services/searchBar';
 import { handleGetProductsToStore, handleRenderList } from './src/views/store';
-import Swal from "sweetalert2"
 import "./style.css";
 
 export let categoriaActiva = null;
@@ -151,12 +150,6 @@ const handleSaveorModifyElements = () => {
             categoria,
         };
     }
-    Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Producto cargado con éxito!",
-        icon: "success"
-      });
-
     setInLocalStorage(object);
     handleGetProductsToStore();
     cerrarModal();
@@ -172,35 +165,12 @@ window.addEventListener("DOMContentLoaded", () => {
 // Eliminación de productos
 
 export const handleDeleteProduct = () => {
-    if (!productoActivo) {
-        Swal.fire({
-            title: "Error",
-            text: "No hay producto seleccionado para eliminar",
-            icon: "error",
-        });
-        return;
-    }
-
-    Swal.fire({
-        title: "¿Seguro que queres eliminar el producto?",
-        text: "No vas a poder revertir esta acción",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "¡Si, borralo!"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const products = handleGetProductLocalStorage();
-            const result = products.filter((el) => el.id !== productoActivo.id); // Aquí es donde se usa productoActivo.id
-            localStorage.setItem("products", JSON.stringify(result));
-            const newProducts = handleGetProductLocalStorage();
-            handleRenderList(newProducts);
-            cerrarModal();
-        } else {
-            cerrarModal();
-        }
-    });
+    const products = handleGetProductLocalStorage();
+    const result = products.filter((el) => el.id !== productoActivo.id); // Aquí es donde se usa productoActivo.id
+    localStorage.setItem("products", JSON.stringify(result));
+    const newProducts = handleGetProductLocalStorage();
+    handleRenderList(newProducts);
+    cerrarModal();
 }
 
 // Funciones para realizar ciertas acciones al presionar ciertas teclas.
